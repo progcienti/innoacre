@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth; /* Adiciona scroll suave */
 }
 
 body {
@@ -20,7 +21,7 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #27ae60, #1e8449); /* Degradê no verde */
+  background: linear-gradient(135deg, #27ae60, #a9d7bd); /* Degradê no verde */
   padding: 20px 0;
   text-align: center;
 }
@@ -44,17 +45,17 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #d4edda; /* Verde mais claro para destaque */
+  color: #d4edda;
 }
 
 /* Hero Section */
 .hero {
   background: url('images/hero-bg.jpg') no-repeat center center/cover;
-  color: #fff;
+  color: #000000;
   padding: 100px 0;
   text-align: center;
 }
@@ -75,13 +76,18 @@ nav ul li a:hover {
   padding: 12px 25px;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.3s ease-in-out, transform 0.2s;
+  transition: 0.3s;
 }
 
 .hero .btn:hover {
   background: #1f6690;
-  transform: scale(1.05);
 }
+
+/* Scroll Suave - JavaScript */
+html {
+  scroll-behavior: smooth; /* Faz a rolagem ser suave */
+}
+
 
 /* Sobre Nós */
 .about {
@@ -249,3 +255,36 @@ footer {
 .social-links img:hover {
   transform: scale(1.2);
 }
+
+/* Ajustes nas imagens de membros da equipe */
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 200px;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-member h4 {
+  color: #2980b9;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+

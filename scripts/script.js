@@ -1,9 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("form");
-
-    form.addEventListener("submit", (event) => {
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("nav ul li a");
+  
+    links.forEach(link => {
+      link.addEventListener("click", function (event) {
         event.preventDefault();
-        alert("Mensagem enviada com sucesso!");
-        form.reset();
+  
+        const targetId = this.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+  
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 50, // Ajusta para não cobrir o topo
+            behavior: "smooth"
+          });
+        }
+      });
     });
-});
+  });
+  
