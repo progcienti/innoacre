@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnoAcre - Inovação + Acre</title>
+  <title>InnoAcre</title>
   <link rel="stylesheet" href="style/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -79,39 +79,47 @@
   </section>
 
   <!-- Projetos -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Nossos Projetos</h2>
-      <div class="project-grid">
-        <div class="project-item">
-          <img src="Icons/impressora 3d- modelo 3d.png" alt="Impressora 3D">
-          <h3>Impressora 3D de Baixo Custo</h3>
-          <p>Desenvolvida com componentes reciclados, reduzindo custos e impactos ambientais.</p>
-        </div>
-        <div class="project-item">
-          <img src="images/maquina-filamento.jpg" alt="Máquina de Filamentos">
-          <h3>Máquina de Filamentos Reciclados</h3>
-          <p>Transforma garrafas PET em matéria-prima para impressão 3D.</p>
-        </div>
+<section id="projects" class="projects">
+  <div class="container">
+    <h2>Nossos Projetos</h2>
+    <div class="project-grid">
+      <div class="project-item" onclick="showProjectDetails('project1')">
+        <img src="Icons/impressora 3d- modelo 3d.png" alt="Impressora 3D">
+        <h3>Impressora 3D de Baixo Custo</h3>
+        <p>Desenvolvida com componentes reciclados, reduzindo custos e impactos ambientais.</p>
+      </div>
+      <div class="project-item" onclick="showProjectDetails('project2')">
+        <img src="Icons/Maquina de filamentos 3d.jpg" alt="Máquina de Filamentos">
+        <h3>Máquina de Filamentos Reciclados</h3>
+        <p>Transforma garrafas PET em matéria-prima para impressão 3D.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Modal para detalhes do projeto -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="projectDetails"></div>
+  </div>
+</div>
 
   <!-- Impacto -->
   <section id="impact" class="impact">
     <div class="container">
-      <h2>Impacto</h2>
+      <h2> Previsão de Impacto</h2>
       <div class="impact-stats">
         <div class="stat">
           <h3>+1.000</h3>
           <p>Garrafas PET recicladas</p>
         </div>
         <div class="stat">
-          <h3>+500</h3>
+          <h3>+100</h3>
           <p>Pessoas capacitadas</p>
         </div>
         <div class="stat">
-          <h3>+80%</h3>
+          <h3>+70%</h3>
           <p>Redução de resíduos eletrônicos</p>
         </div>
       </div>
@@ -130,6 +138,14 @@
       </form>
     </div>
   </section>
+    <!-- Contato Direto -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> <a href="mailto:innoacre@gmail.com">innoacre@gmail.com</a></p>
+      <p><i class="fas fa-phone"></i> <a href="tel:+5568999999999">(68) 99999-9999</a></p>
+    </div>
+    
+
+    
 
   <!-- Footer -->
   <footer>
@@ -137,7 +153,6 @@
       <p>&copy; 2025 InnoAcre. Todos os direitos reservados.</p>
       <div class="social-links">
         <a href="https://www.instagram.com/innoacre/?utm_source=ig_web_button_share_sheet"><img src="Icons/iconmonstr-instagram-11.svg" alt="Instagram"></a>
-        <a href="#"><img src="images/icon-linkedin.png" alt="LinkedIn"></a>
         <a href="#"><img src="Icons/youtube-123.svg" alt="YouTube"></a>
       </div>
     </div>

@@ -76,12 +76,14 @@ nav ul li a:hover {
   padding: 12px 25px;
   text-decoration: none;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
 .hero .btn:hover {
   background: #1f6690;
+  transform: scale(1.05);
 }
+
 
 /* Scroll Suave - JavaScript */
 html {
@@ -114,7 +116,7 @@ html {
 }
 
 .value-item img {
-  height: 80px;
+  height: 200px;
   margin-bottom: 10px;
 }
 
@@ -287,4 +289,51 @@ footer {
   color: #666;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+}
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.contact-info a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: #000000;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
 
