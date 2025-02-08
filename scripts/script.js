@@ -31,3 +31,5 @@ function showProjectDetails(projectId) {
   function closeModal() {
     document.getElementById('projectModal').style.display = 'none';
   }
+
+  
