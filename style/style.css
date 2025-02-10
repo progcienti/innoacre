@@ -50,12 +50,15 @@ header .logo img:hover {
   transform: scale(1.1);
 }
 
+/* Estilos para o menu em telas maiores */
+/* Estilos gerais para o menu */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -71,6 +74,30 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #9fedb1;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap; /* Permite que os itens do menu quebrem para a próxima linha */
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os itens */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Reduz o espaçamento entre os itens */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column; /* Alinha os itens verticalmente */
+    gap: 5px; /* Espaçamento menor entre os itens */
+  }
+
+  nav ul li {
+    margin: 0; /* Remove a margem lateral */
+  }
 }
 
 /* Hero Section */
