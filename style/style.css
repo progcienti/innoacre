@@ -1,18 +1,32 @@
+/* Importando o Bootstrap */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+/* Definindo variáveis de cores */
+:root {
+  --primary-color: #27ae60; /* Verde principal */
+  --secondary-color: #a9d7bd; /* Verde mais escuro */
+  --accent-color: #2980b9; /* Azul para destaques */
+  --background-color: #f8f9fa; /* Cor de fundo suave */
+  --text-color: #333; /* Cor do texto */
+  --light-text-color: #fff; /* Texto claro */
+}
+
 /* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth; /* Adiciona scroll suave */
+  scroll-behavior: smooth; /* Scroll suave */
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #f8f9fa;
+  color: var(--text-color);
+  background: var(--background-color);
 }
 
+/* Container */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -21,20 +35,27 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #27ae60, #a9d7bd); /* Degradê no verde */
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   padding: 20px 0;
-  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header .logo img {
   height: 90px;
-  border-radius: 100px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+header .logo img:hover {
+  transform: scale(1.1);
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 nav ul li {
@@ -42,10 +63,10 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: var(--light-text-color);
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
@@ -55,28 +76,47 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
   background: url('images/hero-bg.jpg') no-repeat center center/cover;
-  color: #000000;
-  padding: 100px 0;
+  color: var(--light-text-color);
+  padding: 150px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero .btn {
-  background: #2980b9;
-  color: #fff;
-  padding: 12px 25px;
+  background: var(--accent-color);
+  color: var(--light-text-color);
+  padding: 12px 30px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
+  font-weight: bold;
   transition: background 0.3s ease-in-out, transform 0.2s;
+  position: relative;
+  z-index: 1;
 }
 
 .hero .btn:hover {
@@ -84,23 +124,16 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-
-/* Scroll Suave - JavaScript */
-html {
-  scroll-behavior: smooth; /* Faz a rolagem ser suave */
-}
-
-
 /* Sobre Nós */
 .about {
   padding: 80px 0;
+  background: var(--light-text-color);
   text-align: center;
-  background: #fff;
 }
 
 .about h2 {
-  margin-bottom: 20px;
-  color: #27ae60;
+  color: var(--primary-color);
+  margin-bottom: 40px;
 }
 
 .values {
@@ -113,27 +146,91 @@ html {
 .value-item {
   text-align: center;
   max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--background-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.value-item:hover {
+  transform: translateY(-10px);
 }
 
 .value-item img {
   height: 200px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
 }
 
 .value-item h3 {
-  color: #2980b9;
+  color: var(--accent-color);
+  margin-bottom: 10px;
 }
+
+/*Times*/
+
+/* Estilização dos membros da equipe */
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 250px;
+  padding: 20px;
+  background: var(--light-text-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid var(--primary-color);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.team-member:hover img {
+  border-color: var(--accent-color);
+}
+
+.team-member h4 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.team-member p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 
 /* Projetos */
 .projects {
-  background: #f4f4f4;
   padding: 80px 0;
+  background: var(--background-color);
 }
 
 .projects h2 {
+  color: var(--primary-color);
   text-align: center;
   margin-bottom: 40px;
-  color: #27ae60;
 }
 
 .project-grid {
@@ -144,18 +241,18 @@ html {
 }
 
 .project-item {
-  background: #fff;
+  background: var(--light-text-color);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .project-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-item img {
@@ -165,18 +262,20 @@ html {
 }
 
 .project-item h3 {
-  color: #2980b9;
+  color: var(--accent-color);
+  margin-bottom: 10px;
 }
 
 /* Impacto */
 .impact {
   padding: 80px 0;
+  background: var(--light-text-color);
   text-align: center;
-  background: #fff;
 }
 
 .impact h2 {
-  color: #27ae60;
+  color: var(--primary-color);
+  margin-bottom: 40px;
 }
 
 .impact-stats {
@@ -186,64 +285,65 @@ html {
   flex-wrap: wrap;
 }
 
+.stat {
+  text-align: center;
+}
+
 .stat h3 {
   font-size: 2.5rem;
-  color: #2980b9;
+  color: var(--accent-color);
+  margin-bottom: 10px;
 }
 
 /* Contato */
+/* Estilização da Seção de Contato */
 .contact {
-  background: linear-gradient(135deg, #27ae60, #1e8449);
-  color: #fff;
   padding: 80px 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--light-text-color);
   text-align: center;
 }
 
 .contact h2 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
+  color: var(--light-text-color);
 }
 
-.contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact input, 
-.contact textarea {
-  width: 50%;
-  padding: 12px;
+.contact p {
+  font-size: 1.2rem;
   margin-bottom: 15px;
-  border-radius: 5px;
-  border: none;
-  transition: box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.contact input:focus, 
-.contact textarea:focus {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  outline: none;
+.contact a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
 
-.contact .btn {
-  background: #2980b9;
-  color: #fff;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out, transform 0.2s;
+.contact a:hover {
+  color: var(--accent-color);
 }
 
-.contact .btn:hover {
-  background: #1f6690;
-  transform: scale(1.05);
+.contact i {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact a:hover i {
+  transform: scale(1.2);
 }
 
 /* Footer */
 footer {
   background: #2c3e50;
-  color: #fff;
+  color: var(--light-text-color);
   padding: 20px 0;
   text-align: center;
 }
@@ -251,206 +351,30 @@ footer {
 .social-links img {
   height: 30px;
   margin: 0 10px;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease-in-out;
 }
 
 .social-links img:hover {
   transform: scale(1.2);
 }
 
-/* Ajustes nas imagens de membros da equipe */
-.team {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.team-member {
-  text-align: center;
-  max-width: 200px;
-}
-
-.team-member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.team-member h4 {
-  color: #2980b9;
-  margin-bottom: 5px;
-}
-
-.team-member p {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-}
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%;
-  text-align: center;
-}
-.close {
-  float: right;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  font-size: 1.2rem;
-}
-
-.contact-info a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-}
-
-.contact-info a:hover {
-  color: #000000;
-}
-
-.contact-info i {
-  margin-right: 10px;
-  font-size: 1.5rem;
-}
-
-
-/* Responsividade */
+/* Responsividade com Bootstrap */
 @media (max-width: 768px) {
-  /* Header */
-  header {
-    padding: 10px 0;
-  }
-
-  header .logo img {
-    height: 70px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    margin-top: 8px;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  /* Hero Section */
-  .hero {
-    padding: 50px 0;
-  }
-
   .hero h1 {
     font-size: 2.5rem;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
-  /* Sobre Nós */
-  .about h2 {
-    font-size: 2rem;
-  }
-
-  .values {
+  .values, .project-grid, .impact-stats {
     flex-direction: column;
     align-items: center;
   }
 
-  .value-item {
-    max-width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .team .team-member {
+  .value-item, .project-item {
     width: 100%;
-  }
-
-  /* Projetos */
-  .project-grid {
-    flex-direction: column;
-  }
-
-  .project-item {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  /* Impacto */
-  .impact-stats {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .stat {
-    text-align: center;
-  }
-
-  /* Contato */
-  .contact input, 
-  .contact textarea {
-    width: 80%;
-  }
-
-  /* Footer */
-  footer .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  footer .social-links a img {
-    width: 25px;
-    height: 25px;
+    max-width: 90%;
   }
 }
-
-@media (max-width: 480px) {
-  /* Ajustes para telas muito pequenas (smartphones) */
-  header .logo img {
-    height: 50px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  .contact input, 
-  .contact textarea {
-    width: 90%;
-  }
-
-  .contact form {
-    width: 100%;
-  }
-}
-
-
