@@ -41,7 +41,7 @@ header {
 }
 
 header .logo img {
-  height: 90px;
+  height: 110px;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
@@ -92,7 +92,7 @@ nav ul li a:hover {
 @media (max-width: 480px) {
   nav ul {
     flex-direction: column; /* Alinha os itens verticalmente */
-    gap: 5px; /* Espaçamento menor entre os itens */
+    gap: 2px; /* Espaçamento menor entre os itens */
   }
 
   nav ul li {
