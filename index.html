@@ -1,170 +1,236 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnoAcre</title>
-  <link rel="stylesheet" href="style/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InnoAcre - Inovação Sustentável</title>
+    <link rel="shortcut icon" href="Icons/InnoAcre_logo1-removebg-preview.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="Icons/InnoAcre logo1.jpg" alt="Logo InnoAcre">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Início</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#projects">Projetos</a></li>
-          <li><a href="#impact">Impacto</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container">
-      <h1>Transformando resíduos em inovação.</h1>
-      <p>InnoAcre: Inovação + Acre. Tecnologia sustentável para um futuro circular.</p>
-      <a href="#projects" class="btn">Conheça nossos projetos</a>
-    </div>
-  </section>
-
-  <!-- Sobre Nós -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>Sobre Nós</h2>
-      <p>A InnoAcre é uma iniciativa pioneira no Acre, focada em desenvolver tecnologias sustentáveis que transformam resíduos em recursos valiosos. Nosso objetivo é promover a economia circular, inovação tecnológica e inclusão social. Acreditamos que é possível transformar a realidade do estado do Acre e contribuir para um mundo mais sustentável, criando soluções inovadoras e acessíveis para todos.</p>
-      <p>Somos uma equipe comprometida com o desenvolvimento de tecnologias que agregam valor à sociedade e ao meio ambiente. Estamos sempre em busca de novas ideias e parcerias que potencializem nossas ações e ampliem nosso impacto.</p>
-      
-      <h3>Nossos Valores:</h3>
-      <div class="values">
-        <div class="value-item">
-          <img src="Icons/peças utilizaveiz .jpg" alt="Sustentabilidade">
-          <h3>Sustentabilidade</h3>
-          <p>Desenvolver soluções que respeitam o meio ambiente e promovem a economia circular.</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+        <!--INICIAL-->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Icons/InnoAcre_logo1-removebg-preview.png" alt="InnoAcre Logo" width="30" height="30" class="d-inline-block align-text-top">
+                InnoAcre
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#valores">Valores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impacto">Impacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="value-item">
-          <img src="Icons/peças utilizaveis 2 .jpg" alt="Inovação">
-          <h3>Inovação</h3>
-          <p>Aplicar tecnologias criativas e eficazes para transformar resíduos em recursos valiosos.</p>
+    </nav>
+    
+
+    <header class="hero" data-aos="fade-up">
+        <h1 class="text-4xl font-bold">Inovação Sustentável para um Futuro Melhor</h1>
+        <p class="mt-4">Tecnologia e sustentabilidade de mãos dadas para transformar o mundo.</p>
+        <a href="#projetos" class="btn btn-custom btn-lg mt-3">Conheça nossos projetos</a>
+    </header>
+
+    <!--SOBRE-->
+    <section id="sobre" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="text-success">Sobre a InnoAcre</h2>
+                    <p>
+                        A <strong>InnoAcre</strong> é uma iniciativa pioneira no Acre, focada em desenvolver tecnologias sustentáveis que transformam resíduos em recursos valiosos. Nosso objetivo é promover a economia circular, inovação tecnológica e inclusão social.
+                    </p>
+                    <p>
+                        Acreditamos que é possível transformar a realidade do estado do Acre e contribuir para um mundo mais sustentável, criando soluções inovadoras e acessíveis para todos.
+                    </p>
+                    <p>
+                        Somos uma equipe comprometida com o desenvolvimento de tecnologias que agregam valor à sociedade e ao meio ambiente. Estamos sempre em busca de novas ideias e parcerias que potencializem nossas ações e ampliem nosso impacto.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="Icons/InnoAcre logo1.jpg" alt="InnoAcre Tecnologia Sustentável" class="img-fluid rounded shadow">
+                </div>
+            </div>
         </div>
-        <div class="value-item">
-          <img src="Icons/peças utilizaveis 3.jpg" alt="Inclusão">
-          <h3>Inclusão Social</h3>
-          <p>Promover a inclusão de todas as comunidades através da educação e inovação tecnológica.</p>
+    </section>
+    
+    
+        <!--VALORES-->
+    <section id="valores" class="container my-5">
+        <h2 class="text-center mb-4">Nossos Valores</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4" data-aos="fade-up">
+                <div class="card border-0 shadow-lg">
+                    <img src="Icons/peças utilizaveiz .jpg" alt="Sustentabilidade" class="card-img-top rounded-circle mx-auto" style="width: 150px; height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title text-success">Sustentabilidade</h4>
+                        <p class="card-text">Compromisso com práticas ecológicas e inovação ambiental, visando o bem-estar do nosso planeta.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up">
+                <div class="card border-0 shadow-lg">
+                    <img src="Icons/peças utilizaveis 2 .jpg" alt="Tecnologia" class="card-img-top rounded-circle mx-auto" style="width: 150px; height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title text-success">Tecnologia</h4>
+                        <p class="card-text">Desenvolvimento de soluções inovadoras e acessíveis, utilizando tecnologia de ponta e materiais sustentáveis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up">
+                <div class="card border-0 shadow-lg">
+                    <img src="Icons/peças utilizaveis 3.jpg" alt="Inclusão" class="card-img-top rounded-circle mx-auto" style="width: 150px; height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title text-success">Inclusão</h4>
+                        <p class="card-text">Capacitação e inclusão social, oferecendo igualdade de oportunidades e ferramentas para todos.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <h3>Nosso Time:</h3>
-      <div class="team">
-        <div class="team-member">
-          <img src="image_time/Joao a.jpg" alt="Integrante 1">
-          <h4>João Augusto </h4>
-          <h5>CEO, CTO</h5>
-          <p> Responsável pelo desenvolvimento dos projetos, atuando na criação, implementação e aprimoramento das soluções tecnológicas e inovadoras da InnoAcre.
-          </p>
+    <!--TIME-->
+    <section id="time" class="container my-5">
+        <h2 class="text-center mb-4">Nosso Time</h2>
+        <div class="row text-center">
+            <!-- João -->
+            <div class="col-md-3 mb-4" data-aos="fade-up">
+                <div class="card shadow border-0 rounded-lg">
+                    <img src="image_time/Joao a.jpg" alt="João Augusto" class="card-img-top rounded-circle mx-auto" style="width: 180px; height: 180px; object-fit: cover; margin-top: -50px;">
+                    <div class="card-body">
+                        <h4 class="card-title text-success">João Augusto</h4>
+                        <p class="card-text">Pesquisador e coordenador de projetos. Responsável pela execução de pesquisa e desenvolvimento de novas soluções.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Anna -->
+             <div class="col-md-3 mb-4" data-aos="fade-up">
+              <div class="card shadow border-0 rounded-lg">
+                  <img src="image_time/Anna4.jpg" alt="Anna Luisa" class="card-img-top rounded-circle mx-auto" style="width: 180px; height: 180px; object-fit: cover; margin-top: -50px;">
+                  <div class="card-body">
+                      <h4 class="card-title text-success">Anna Luisa</h4>
+                      <p class="card-text">Gestora de Projetos e Estratégias. Responsável pela coordenação e planejamento das ações de desenvolvimento da InnoAcre.</p>
+                  </div>
+              </div>
+          </div>
+
+            <!-- Marcelo -->
+            <div class="col-md-3 mb-4" data-aos="fade-up">
+                <div class="card shadow border-0 rounded-lg">
+                    <img src="image_time/marcelo.jpg" alt="Marcelo Ramon" class="card-img-top rounded-circle mx-auto" style="width: 180px; height: 180px; object-fit: cover; margin-top: -50px;">
+                    <div class="card-body">
+                        <h4 class="card-title text-success">Dr. Marcelo Ramon</h4>
+                        <p class="card-text">Fundador e pesquisador líder. Especialista em nanotecnologia e inovação sustentável, liderando o desenvolvimento do projeto.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Jordana -->
+            <div class="col-md-3 mb-4" data-aos="fade-up">
+                <div class="card shadow border-0 rounded-lg">
+                    <img src="image_time/jordana raica .jpg" alt="Jordana" class="card-img-top rounded-circle mx-auto" style="width: 180px; height: 180px; object-fit: cover; margin-top: -50px;">
+                    <div class="card-body">
+                        <h4 class="card-title text-success">Jordana</h4>
+                        <p class="card-text">Designer Gráfico e Comunicação. Criadora da identidade visual e responsável pela divulgação e marketing do projeto.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="team-member">
-          <img src="image_time/Anna4.jpg" alt="Integrante 2">
-          <h4>Anna Luisa</h4>
-          <h5>CEO, CTO</h5>
-          <p>Cuida tanto do desenvolvimento tecnológico quanto do design, garantindo que os produtos tenham uma interface intuitiva e visualmente atraente.
-          </p>
-        </div>        
-        <div class="team-member">
-          <img src="image_time/marcelo.jpg" alt="Integrante 2">
-          <h4>Marcelo Ramon</h4>
-          <h5>COO, CFO</h5>
-          <p> Especialista em pesquisa e desenvolvimento científico, trazendo embasamento acadêmico e técnico para validar e aperfeiçoar as inovações da InnoAcre.
-          </p>
+    </section>
+        <!--PROJETOS-->
+    <section id="projetos" class="container my-5">
+        <h2 class="text-center mb-4">Nossos Projetos</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up">
+                <div class="card shadow border-0">
+                    <img src="Icons/impressora 3d- modelo 3d.png" alt="Projeto 1" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title text-success">Projeto de Impressora 3D</h4>
+                        <p class="card-text">Desenvolvimento de uma impressora 3D de baixo custo, usando materiais reciclados para a impressão.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up">
+                <div class="card shadow border-0">
+                    <img src="Icons/Maquina de filamentos 3d.jpg" alt="Projeto 2" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title text-success">Máquina de Filamentos</h4>
+                        <p class="card-text">Desenvolvimento de uma máquina de filamentos reciclados, transformando PET em material para impressão 3D.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up">
+                <div class="card shadow border-0">
+                    <img src="image_projeto/projeto3.jpg" alt="Projeto 3" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title text-success">phmetro</h4>
+                        <p class="card-text">Desenvolvimento de um Phmetro de baixo custo.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="team-member">
-          <img src="image_time/jordana raica .jpg" alt="Integrante 2">
-          <h4>Jordana Raica</h4>
-          <h5>CMO</h5>
-          <p>Responsável pelo marketing e pelas relações institucionais, cuidando da comunicação, captação de parcerias e fortalecimento da presença da InnoAcre no mercado.
-          </p>
+    </section>
+<!--IMPACTO-->
+    <section id="impacto" class="container my-5">
+        <h2 class="text-center mb-4">Previsão de impacto</h2>
+        <div class="impact-numbers">
+            <div class="impact-item" data-aos="fade-up">
+                <h4>+1000</h4>
+                <p>Garrafas PET recicladas</p>
+            </div>
+            <div class="impact-item" data-aos="fade-up">
+                <h4>+50</h4>
+                <p>Pessoas capacitadas</p>
+            </div>
+            <div class="impact-item" data-aos="fade-up">
+                <h4>+70%</h4>
+                <p>Redução de resíduos eletrônicos</p>
+            </div>
         </div>
-    </div>
-  </section>
-
-  <!-- Projetos -->
-<section id="projects" class="projects">
-  <div class="container">
-    <h2>Nossos Projetos</h2>
-    <div class="project-grid">
-      <div class="project-item" onclick="showProjectDetails('project1')">
-        <img src="Icons/impressora 3d- modelo 3d.png" alt="Impressora 3D">
-        <h3>Impressora 3D de Baixo Custo</h3>
-        <p>Desenvolvida com componentes reciclados, reduzindo custos e impactos ambientais.</p>
-      </div>
-      <div class="project-item" onclick="showProjectDetails('project2')">
-        <img src="Icons/Maquina de filamentos 3d.jpg" alt="Máquina de Filamentos">
-        <h3>Máquina de Filamentos Reciclados</h3>
-        <p>Transforma garrafas PET em matéria-prima para impressão 3D.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Modal para detalhes do projeto -->
-<div id="projectModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <div id="projectDetails"></div>
-  </div>
-</div>
-
-  <!-- Impacto -->
-  <section id="impact" class="impact">
-    <div class="container">
-      <h2> Previsão de Impacto</h2>
-      <div class="impact-stats">
-        <div class="stat">
-          <h3>+1.000</h3>
-          <p>Garrafas PET recicladas</p>
+    </section>
+    <!--CONTATOS E RODAPE -->
+    <footer id="contato" class="text-center py-4 bg-success text-white">
+        <h5>Entre em Contato</h5>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:innoacre@gmail.com" class="text-white">innoacre@gmail.com</a></p>
+        <p><i class="fas fa-phone-alt"></i> Telefone: +55(68)999999999</p>
+        <div class="social-links mb-3">
+            <a href="https://facebook.com/innoacre" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/innoacre" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/company/innoacre" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
         </div>
-        <div class="stat">
-          <h3>+100</h3>
-          <p>Pessoas capacitadas</p>
+        <div class="whatsapp-contact">
+            <p>Fale conosco pelo WhatsApp:</p>
+            <a href="https://wa.me/5599999999999" class="btn btn-light btn-lg">
+                <i class="fab fa-whatsapp"></i> Iniciar Conversa
+            </a>
         </div>
-        <div class="stat">
-          <h3>+70%</h3>
-          <p>Redução de resíduos eletrônicos</p>
+        <div class="container">
+            <br>
+            <p>&copy; 2025 InnoAcre. Todos os direitos reservados.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contato</h2>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:innoacre@gmail.com">innoacre@gmail.com</a></p>
-      <p><i class="fas fa-phone"></i> <a href="tel:+5568999999999">(68) 99999-9999</a></p>
-
-    </div>
-
-  </section>
-    <!-- Contato Direto -->
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 InnoAcre. Todos os direitos reservados.</p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/innoacre/?utm_source=ig_web_button_share_sheet"><img src="Icons/iconmonstr-instagram-11.svg" alt="Instagram"></a>
-        <a href="#"><img src="Icons/youtube-123.svg" alt="YouTube"></a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="scripts/script.js"></script>
+    </footer>
+    
+    
+<!--TA INDO vai da certo-->
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

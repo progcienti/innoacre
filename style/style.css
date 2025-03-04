@@ -1,407 +1,204 @@
-/* Importando o Bootstrap */
-@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
-
-/* Definindo variáveis de cores */
-:root {
-  --primary-color: #27ae60; /* Verde principal */
-  --secondary-color: #a9d7bd; /* Verde mais escuro */
-  --accent-color: #2980b9; /* Azul para destaques */
-  --background-color: #f8f9fa; /* Cor de fundo suave */
-  --text-color: #333; /* Cor do texto */
-  --light-text-color: #fff; /* Texto claro */
-}
-
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth; /* Scroll suave */
-}
-
 body {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background: var(--background-color);
+  background-color: #f4f7f6;
+  font-family: 'Arial', sans-serif;
 }
-
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Header */
-header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  padding: 20px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header .logo img {
-  height: 110px;
-  border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
-}
-
-header .logo img:hover {
-  transform: scale(1.1);
-}
-
-/* Estilos para o menu em telas maiores */
-/* Estilos gerais para o menu */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: var(--light-text-color);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-  color: #9fedb1;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  nav ul {
-    flex-wrap: wrap; /* Permite que os itens do menu quebrem para a próxima linha */
-    justify-content: center;
-    gap: 10px; /* Espaçamento entre os itens */
-  }
-
-  nav ul li {
-    margin: 5px 0; /* Reduz o espaçamento entre os itens */
-  }
-}
-
-@media (max-width: 480px) {
-  nav ul {
-    flex-direction: column; /* Alinha os itens verticalmente */
-    gap: 2px; /* Espaçamento menor entre os itens */
-  }
-
-  nav ul li {
-    margin: 0; /* Remove a margem lateral */
-  }
-}
-
-/* Hero Section */
 .hero {
-  background: url('images/hero-bg.jpg') no-repeat center center/cover;
-  color: var(--light-text-color);
-  padding: 150px 0;
+  background: linear-gradient(rgba(0, 100, 0, 0.8), rgba(0, 50, 0, 0.8)), url('background.jpg');
+  background-size: cover;
+  color: white;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  padding: 100px 20px;
 }
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+.btn-custom {
+  background-color: #2e7d32;
+  color: white;
+  transition: 0.3s;
+}
+.btn-custom:hover {
+  background-color: #1b5e20;
+}
+.card img {
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+  height: 200px;
+  object-fit: cover;
+}
+h2 {
+font-family: 'Arial', sans-serif;
+font-size: 2rem; /* Aumentando o tamanho do título */
+font-weight: bold;
+color: #2e7d32;
+margin-bottom: 20px; /* Para dar mais espaço abaixo do título */
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1;
+h4 {
+color: #006400; /* Cor verde escuro */
+text-align: center;
+font-weight: bold;
+text-transform: uppercase;
+font-size: 1.5rem; /* Aumentando o tamanho do título das cards */
+margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 1;
+.values img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
-
-.hero .btn {
-  background: var(--accent-color);
-  color: var(--light-text-color);
-  padding: 12px 30px;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background 0.3s ease-in-out, transform 0.2s;
-  position: relative;
-  z-index: 1;
-}
-
-.hero .btn:hover {
-  background: #1f6690;
-  transform: scale(1.05);
-}
-
-/* Sobre Nós */
-.about {
-  padding: 80px 0;
-  background: var(--light-text-color);
-  text-align: center;
-}
-
-.about h2 {
-  color: var(--primary-color);
-  margin-bottom: 40px;
-}
-
-.values {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
 .value-item {
   text-align: center;
-  max-width: 300px;
-  padding: 20px;
-  border-radius: 10px;
-  background: var(--background-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  margin: 20px;
+}
+.card-body p {
+  font-size: 1rem;
+  color: #555;
+}
+#sobre h2 {
+font-weight: bold;
+margin-bottom: 20px;
 }
 
-.value-item:hover {
-  transform: translateY(-10px);
+#sobre p {
+font-size: 1.1rem;
+line-height: 1.6;
+text-align: justify;
 }
 
-.value-item img {
-  height: 200px;
-  margin-bottom: 15px;
-  border-radius: 10px;
+#sobre img {
+max-width: 100%;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.value-item h3 {
-  color: var(--accent-color);
-  margin-bottom: 10px;
+footer {
+  font-size: 0.9rem;
 }
-
-/*Times*/
-
-/* Estilização dos membros da equipe */
-.team {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 40px;
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2e7d32;
 }
-
-.team-member {
-  text-align: center;
-  max-width: 250px;
-  padding: 20px;
-  background: var(--light-text-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.social-links i {
+  font-size: 30px;
+  margin: 10px;
+  color: #2e7d32;
 }
-
-.team-member:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.team-member img {
-  width: 150px;
-  height: 150px;
+.social-links img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  border: 4px solid var(--primary-color);
-  transition: border-color 0.3s ease-in-out;
+}
+.navbar-nav {
+  display: flex !important;
+  visibility: visible !important;
+}
+.navbar-brand img {
+height: 30px;
+width: auto;
+margin-right: 8px; /* Espaço entre a logo e o texto */
 }
 
-.team-member:hover img {
-  border-color: var(--accent-color);
+.navbar .navbar-brand img {
+  height: 50px;
+}
+.navbar .nav-link {
+  font-size: 1.1rem;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+.impact-numbers {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  animation: impact-animation 2s ease-in-out;
+}
+.impact-item {
+  text-align: center;
+}
+.impact-item h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+.impact-item p {
+  color: #555;
+}
+#logo {
+  width: 200px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.team-member h4 {
-  color: var(--accent-color);
-  margin-bottom: 10px;
+/* Destaque para títulos */
+h4 {
+  color: #006400; /* Cor verde escuro */
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Estilo do título do projeto */
+.card-title {
+  color: #2e8b57;
+  font-weight: bold;
   font-size: 1.25rem;
 }
 
-.team-member p {
-  color: var(--text-color);
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-
-/* Projetos */
-.projects {
-  padding: 80px 0;
-  background: var(--background-color);
-}
-
-.projects h2 {
-  color: var(--primary-color);
+.card-body {
   text-align: center;
-  margin-bottom: 40px;
 }
 
-.project-grid {
+.impact-numbers {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.project-item {
-  background: var(--light-text-color);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.project-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.project-item img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.project-item h3 {
-  color: var(--accent-color);
-  margin-bottom: 10px;
-}
-
-/* Impacto */
-.impact {
-  padding: 80px 0;
-  background: var(--light-text-color);
+  justify-content: space-around;
   text-align: center;
 }
 
-.impact h2 {
-  color: var(--primary-color);
-  margin-bottom: 40px;
+.impact-item {
+  margin: 20px;
 }
-
-.impact-stats {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.stat {
-  text-align: center;
-}
-
-.stat h3 {
-  font-size: 2.5rem;
-  color: var(--accent-color);
-  margin-bottom: 10px;
-}
-
-/* Contato */
-/* Estilização da Seção de Contato */
-.contact {
-  padding: 80px 0;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: var(--light-text-color);
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--light-text-color);
-}
-
-.contact p {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.contact a {
-  color: var(--light-text-color);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-}
-
-.contact a:hover {
-  color: var(--accent-color);
-}
-
-.contact i {
-  font-size: 1.5rem;
-  color: var(--accent-color);
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact a:hover i {
-  transform: scale(1.2);
-}
-
-/* Footer */
-footer {
-  background: #2c3e50;
-  color: var(--light-text-color);
-  padding: 20px 0;
-  text-align: center;
+.social-links i {
+font-size: 30px;
+color: #1d1e1d;
+margin: 10px;
 }
 
 .social-links img {
-  height: 30px;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+}
+
+.social-links a {
+  color: white;
   margin: 0 10px;
-  transition: transform 0.3s ease-in-out;
+  font-size: 1.5rem;
 }
 
-.social-links img:hover {
-  transform: scale(1.2);
+.social-links a:hover {
+  color: #ffcc00;
 }
 
-/* Responsividade com Bootstrap */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
+.text-success {
+  color: #006400 !important;
+}
+.text-center mb-4{
+  color: green;
+  background-color: black;
+}
 
-  .hero p {
-    font-size: 1.2rem;
+@keyframes impact-animation {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
   }
-
-  .values, .project-grid, .impact-stats {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .value-item, .project-item {
-    width: 100%;
-    max-width: 90%;
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
